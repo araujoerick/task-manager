@@ -10,9 +10,9 @@ import {
 } from "../assets/icons/";
 import TASKS from "../constants/task";
 import AddTaskDialog from "./AddTaskDialog";
-import Button from "./Button";
 import TaskItem from "./TaskItem";
 import TasksSeparator from "./TasksSeparator";
+import Button from "./ui/Button";
 
 const Tasks = () => {
   const [tasks, setTasks] = useState(TASKS);
