@@ -23,6 +23,20 @@ const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
     }
   }, [isOpen]);
 
+  const handleSaveClick = () => {
+    if (!title.trim() || !description.trim()) {
+      return alert("Preencha todos os campos");
+    }
+
+    handleSubmit({
+      id: v4(),
+      title,
+      time,
+      description,
+      status: "not_started",
+    });
+  };
+
   return (
     <CSSTransition
       nodeRef={nodeRef}
@@ -74,15 +88,7 @@ const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
                     Cancelar
                   </Button>
                   <Button
-                    onClick={() =>
-                      handleSubmit({
-                        id: v4(),
-                        title,
-                        time,
-                        description,
-                        status: "not_started",
-                      })
-                    }
+                    onClick={() => handleSaveClick()}
                     className="w-full"
                     size="medium"
                   >
