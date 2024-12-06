@@ -13,6 +13,8 @@ const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
   const [title, setTitle] = useState("");
   const [time, setTime] = useState("morning");
   const [description, setDescription] = useState("");
+  const [errors, setErrors] = useState([]);
+
   const nodeRef = useRef();
 
   useEffect(() => {
@@ -24,8 +26,25 @@ const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
   }, [isOpen]);
 
   const handleSaveClick = () => {
-    if (!title.trim() || !description.trim()) {
-      return alert("Preencha todos os campos");
+    const newErrors = [];
+
+    if (!title.trim()) {
+      newErrors.push({
+        inputName: "title",
+        errorMessage: "O nome da tarefa é obrigatório.",
+      });
+    }
+
+    if (!description.trim()) {
+      newErrors.push({
+        inputName: "description",
+        errorMessage: "A descrição da tarefa e obrigatória.",
+      });
+    }
+
+    if (newErrors.length > 0) {
+      setErrors(newErrors);
+      return;
     }
 
     handleSubmit({
@@ -36,6 +55,11 @@ const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
       status: "not_started",
     });
   };
+
+  const titleError = errors.find((error) => error.inputName === "title");
+  const descriptionError = errors.find(
+    (error) => error.inputName === "description",
+  );
 
   return (
     <CSSTransition
@@ -64,6 +88,7 @@ const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
                   placeholder="Nome da tarefa"
                   value={title}
                   onChange={({ target }) => setTitle(target.value)}
+                  error={titleError}
                 />
 
                 <TimeSelect
@@ -77,7 +102,9 @@ const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
                   placeholder="Descreva a tarefa"
                   value={description}
                   onChange={({ target }) => setDescription(target.value)}
+                  error={descriptionError}
                 />
+
                 <div className="flex gap-3">
                   <Button
                     onClick={handleClose}
