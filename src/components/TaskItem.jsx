@@ -15,7 +15,7 @@ const TaskItem = ({ task, handleCheckboxClick, handleDeleteClick }) => {
       return "bg-[#FFAA04] text-[#FFAA04]";
     }
     if (task.status === "not_started") {
-      return "bg-[#35383E]/10 text-[#35383E]";
+      return "bg-brand-dark-blue/10 text-[#35383E]";
     }
   };
 

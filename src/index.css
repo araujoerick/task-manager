@@ -130,8 +130,8 @@
   }
 
   body {
-    @apply bg-[#f8f8f8];
-    @apply text-[#35383E];
+    @apply bg-brand-background;
+    @apply text-brand-dark-blue;
     @apply select-none;
   }
 }
