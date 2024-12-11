@@ -11,6 +11,7 @@ export default {
           primary: "#00ADB5",
           "dark-blue": "#35383E",
           "dark-gray": "#818181",
+          "dark-border": "#ECECEC",
           "text-gray": "#9A9C9F",
           "light-gray": "#EEEEEE",
           white: "#FFFFFF",
