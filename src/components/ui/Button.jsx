@@ -1,39 +1,30 @@
-const Button = ({
-  children,
-  variant = "primary",
-  size = "small",
-  className,
-  ...rest
-}) => {
-  const getVariantClasses = () => {
-    if (variant === "primary") {
-      return "text-white bg-brand-primary hover:bg-brand-primary/70";
-    }
-    if (variant === "secondary") {
-      return "text-brand-dark-blue bg-brand-dark-blue/10 hover:bg-brand-dark-blue/15";
-    }
-    if (variant === "ghost") {
-      return "text-brand-dark-gray bg-transparent hover:bg-brand-dark-gray/15";
-    }
-  };
+import { tv } from "tailwind-variants";
 
-  const getSizeClasses = () => {
-    if (size === "small") {
-      return "px-3 py-1 text-xs";
-    }
-    if (size === "medium") {
-      return "text-sm px-6 py-2";
-    }
-    if (size === "large") {
-      return "text-base px-8 py-3";
-    }
-  };
+const Button = ({ children, className, color, size, ...rest }) => {
+  const button = tv({
+    base: "flex items-center justify-center gap-2 rounded-md font-semibold transition",
+    variants: {
+      color: {
+        primary: "bg-brand-primary text-white hover:bg-brand-primary/70",
+        secondary:
+          "bg-brand-dark-blue/10 text-brand-dark-blue hover:bg-brand-dark-blue/15",
+        ghost:
+          "bg-transparent text-brand-dark-gray hover:bg-brand-dark-gray/15",
+      },
+      size: {
+        small: "px-3 py-1 text-xs",
+        medium: "px-6 py-2 text-sm",
+        large: "px-8 py-3 text-base",
+      },
+    },
+    defaultVariants: {
+      color: "primary",
+      size: "small",
+    },
+  });
 
   return (
-    <button
-      className={`flex items-center justify-center gap-2 rounded-md font-semibold transition ${getVariantClasses()} ${getSizeClasses()} ${className}`}
-      {...rest}
-    >
+    <button className={button({ className, color, size })} {...rest}>
       {children}
     </button>
   );
