@@ -1,81 +1,88 @@
 {
   "tasks": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Academia",
       "description": "Ir para academia",
       "time": "morning",
       "status": "done"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Estudar FSC",
       "description": "Estudar para o teste FSC",
       "time": "afternoon",
       "status": "in_progress"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Ler livro",
       "description": "Ler livro de matemática",
       "time": "evening",
       "status": "not_started"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Reunião de trabalho",
       "description": "Participar da reunião semanal com a equipe",
       "time": "morning",
       "status": "not_started"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Fazer compras",
       "description": "Comprar mantimentos para a semana",
       "time": "afternoon",
       "status": "in_progress"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Correr no parque",
       "description": "Fazer 5 km de corrida",
       "time": "evening",
       "status": "done"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Planejar viagem",
       "description": "Organizar itinerário e reservas para viagem",
       "time": "afternoon",
       "status": "not_started"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Assistir aula online",
       "description": "Assistir à aula sobre desenvolvimento web",
       "time": "morning",
       "status": "done"
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Limpar a casa",
       "description": "Fazer faxina geral na casa",
       "time": "morning",
       "status": "in_progress"
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Jantar com amigos",
       "description": "Sair para jantar com amigos no restaurante",
       "time": "evening",
       "status": "not_started"
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Escrever artigo",
       "description": "Redigir artigo técnico para o blog",
       "time": "afternoon",
       "status": "done"
+    },
+    {
+      "id": "d7dda734-a495-401c-b152-59039a18e307",
+      "title": "Nova Tarefa",
+      "time": "morning",
+      "description": "Nova Tarefa",
+      "status": "not_started"
     }
   ]
 }
