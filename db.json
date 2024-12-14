@@ -76,13 +76,6 @@
       "description": "Redigir artigo técnico para o blog",
       "time": "afternoon",
       "status": "done"
-    },
-    {
-      "id": "d7dda734-a495-401c-b152-59039a18e307",
-      "title": "Nova Tarefa",
-      "time": "morning",
-      "description": "Nova Tarefa",
-      "status": "not_started"
     }
   ]
 }
