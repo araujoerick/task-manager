@@ -90,7 +90,7 @@ TaskItem.propTypes = {
     time: PropTypes.oneOf(["morning", "afternoon", "evening"]).isRequired,
   }).isRequired,
   handleCheckboxClick: PropTypes.func.isRequired,
-  handleDeleteClick: PropTypes.func.isRequired,
+  onDeleteSuccess: PropTypes.func.isRequired,
 };
 
 export default TaskItem;

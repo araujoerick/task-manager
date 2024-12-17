@@ -76,13 +76,6 @@
       "description": "Redigir artigo técnico para o blog",
       "time": "afternoon",
       "status": "done"
-    },
-    {
-      "id": "35b2cd2e-5869-400d-bcea-1572bf486a09",
-      "title": "Teste 1",
-      "time": "morning",
-      "description": "Teste 1",
-      "status": "not_started"
     }
   ]
 }
