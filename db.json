@@ -90,13 +90,6 @@
       "description": "dafasd",
       "time": "morning",
       "status": "not_started"
-    },
-    {
-      "id": "2dae5ef7-62f7-4a17-bee0-5e77a56ee9a6",
-      "title": "teste 3",
-      "description": "asdasdas",
-      "time": "morning",
-      "status": "not_started"
     }
   ]
 }
