@@ -13,7 +13,7 @@ const Input = forwardRef(({ label, error, ...props }, ref) => {
         ref={ref}
         {...props}
       />
-      {error && <InputErrorMessage>{error.errorMessage}</InputErrorMessage>}
+      {error && <InputErrorMessage>{error}</InputErrorMessage>}
     </div>
   );
 });
@@ -22,7 +22,7 @@ Input.displayName = "Input";
 
 Input.propTypes = {
   label: PropTypes.string.isRequired,
-  error: PropTypes.object,
+  error: PropTypes.string,
   placeholder: PropTypes.string,
   id: PropTypes.string.isRequired,
 };
