@@ -54,6 +54,15 @@ const AddTaskDialog = ({ isOpen, handleClose, onSubmitSuccess }) => {
     });
   };
 
+  const handleCancelClick = () => {
+    handleClose();
+    reset({
+      title: "",
+      description: "",
+      time: "morning",
+    });
+  };
+
   return (
     <CSSTransition
       nodeRef={nodeRef}
@@ -118,7 +127,7 @@ const AddTaskDialog = ({ isOpen, handleClose, onSubmitSuccess }) => {
                 <div className="flex gap-3">
                   <Button
                     type="button"
-                    onClick={handleClose}
+                    onClick={handleCancelClick}
                     className="w-full"
                     color="secondary"
                     size="medium"
