@@ -78,21 +78,28 @@
       "status": "done"
     },
     {
-      "id": "f74fdd9f-260c-48d7-9155-9200eec37cd2",
-      "title": "Tarefa Editada 2",
-      "description": "Descrição da Tarefa Editada 2",
-      "time": "morning",
-      "status": "not_started"
-    },
-    {
-      "id": "b9147163-9061-43dd-b106-c55b186966e2",
-      "title": "Tarefa editada",
-      "description": "Descrição da tarefa editada",
-      "time": "morning",
-      "status": "not_started"
-    },
-    {
       "id": "94278126-4921-42bf-9ba0-8a58df5a02f4",
+      "title": "Tarefa da Noite",
+      "description": "Descrição da Tarefa da Noite",
+      "time": "evening",
+      "status": "not_started"
+    },
+    {
+      "id": "883b560e-5c70-4d7d-8789-bded1d60f7f9",
+      "title": "Tarefa do Dia",
+      "description": "Descrição da Tarefa do Dia",
+      "time": "morning",
+      "status": "not_started"
+    },
+    {
+      "id": "252eab27-cc9d-406d-b407-dece6e5db5b0",
+      "title": "Tarefa da Tarde",
+      "description": "Descrição da Tarefa da Tarde",
+      "time": "afternoon",
+      "status": "not_started"
+    },
+    {
+      "id": "a24231d2-bdda-4f28-9d25-36310a820953",
       "title": "Tarefa da Noite",
       "description": "Descrição da Tarefa da Noite",
       "time": "evening",
