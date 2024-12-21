@@ -1,5 +1,6 @@
 import "./AddTaskDialog.css";
 
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import PropTypes from "prop-types";
 import { useRef } from "react";
 import { createPortal } from "react-dom";
@@ -13,8 +14,24 @@ import Button from "./ui/Button";
 import Input from "./ui/Input";
 import TimeSelect from "./ui/TimeSelect";
 
-const AddTaskDialog = ({ isOpen, handleClose, onSubmitSuccess }) => {
+const AddTaskDialog = ({ isOpen, handleClose }) => {
+  const queryClient = useQueryClient();
+
   const nodeRef = useRef();
+
+  const { mutate } = useMutation({
+    mutationKey: ["addTask"],
+    mutationFn: async (task) => {
+      const response = await fetch("http://localhost:3000/tasks", {
+        method: "POST",
+        body: JSON.stringify(task),
+      });
+      if (!response.ok) {
+        throw new Error();
+      }
+      return response.json();
+    },
+  });
 
   const {
     register,
@@ -38,19 +55,23 @@ const AddTaskDialog = ({ isOpen, handleClose, onSubmitSuccess }) => {
       status: "not_started",
     };
 
-    const response = await fetch("http://localhost:3000/tasks", {
-      method: "POST",
-      body: JSON.stringify(task),
-    });
-    if (!response.ok) {
-      return toast.error("Erro ao criar tarefa");
-    }
+    mutate(task, {
+      onSuccess: () => {
+        queryClient.setQueryData(["tasks"], (oldTasks) => {
+          return [...oldTasks, task];
+        });
 
-    onSubmitSuccess(task);
-    reset({
-      title: "",
-      description: "",
-      time: "morning",
+        handleClose();
+        reset({
+          title: "",
+          description: "",
+          time: "morning",
+        });
+        toast.success("Tarefa criada com sucesso!");
+      },
+      onError: () => {
+        toast.error("Erro ao criar tarefa!");
+      },
     });
   };
 

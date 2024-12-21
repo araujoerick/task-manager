@@ -52,14 +52,6 @@ const Tasks = () => {
     queryClient.setQueryData(["tasks"], updatedTasks);
   };
 
-  const onTaskSubmitSuccess = async (task) => {
-    queryClient.setQueryData(["tasks"], (oldTasks) => {
-      return [...oldTasks, task];
-    });
-    setAddTaskDialogIsOpen(false);
-    toast.success("Tarefa criada com sucesso!");
-  };
-
   return (
     <section className="w-full space-y-6 px-8 py-16">
       <div className="flex w-full justify-between">
@@ -82,7 +74,6 @@ const Tasks = () => {
           <AddTaskDialog
             isOpen={addTaskDialogIsOpen}
             handleClose={() => setAddTaskDialogIsOpen(false)}
-            onSubmitSuccess={onTaskSubmitSuccess}
           />
         </div>
       </div>
