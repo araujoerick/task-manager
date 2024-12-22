@@ -35,7 +35,7 @@ const TaskDetailsPage = () => {
     updateTask(data, {
       onSuccess: () => {
         toast.success("Tarefa atualizada com sucesso!");
-        navigate("/");
+        navigate(-1);
       },
       onError: () => {
         toast.error("Erro ao atualizar tarefa!");
@@ -47,7 +47,7 @@ const TaskDetailsPage = () => {
     deleteTask(undefined, {
       onSuccess: () => {
         toast.success("Tarefa deletada com sucesso!");
-        navigate("/");
+        navigate(-1);
       },
       onError: () => {
         toast.error("Erro ao deletar tarefa!");
@@ -71,7 +71,7 @@ const TaskDetailsPage = () => {
             <ArrowLeftIcon />
           </button>
           <div className="mb-2 mt-3 flex items-center gap-2 text-brand-text-gray">
-            <Link className="cursor-pointer text-xs" to="/">
+            <Link className="cursor-pointer text-xs" to={"/tasks"}>
               Minhas Tarefas
             </Link>
             <ChevronRightIcon />
