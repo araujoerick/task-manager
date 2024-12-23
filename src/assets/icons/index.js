@@ -7,6 +7,7 @@ import DetailsIcon from "./details.svg?react";
 import GlassWaterIcon from "./glass-water.svg?react";
 import HomeIcon from "./home.svg?react";
 import LoaderIcon from "./loader.svg?react";
+import Loader2Icon from "./loader2.svg?react";
 import MoonIcon from "./moon.svg?react";
 import SunIcon from "./sun.svg?react";
 import TasksIcon from "./tasks.svg?react";
@@ -22,6 +23,7 @@ export {
   DetailsIcon,
   GlassWaterIcon,
   HomeIcon,
+  Loader2Icon,
   LoaderIcon,
   MoonIcon,
   SunIcon,
