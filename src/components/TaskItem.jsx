@@ -24,7 +24,7 @@ const TaskItem = ({ task }) => {
       return "bg-brand-process text-brand-process";
     }
     if (task.status === "not_started") {
-      return "bg-brand-dark-blue/10 text-brand-dark-blue";
+      return "bg-brand-dark-blue/5 text-brand-dark-blue";
     }
   };
 
@@ -49,10 +49,7 @@ const TaskItem = ({ task }) => {
             toast.success("Tarefa concluida com sucesso!");
           }
         },
-        onError: () =>
-          toast.error(
-            "Erro ao atualizar status da tarefa. Por favor, tente novamente.",
-          ),
+        onError: () => toast.error("Erro ao atualizar status da tarefa."),
       },
     );
   };
