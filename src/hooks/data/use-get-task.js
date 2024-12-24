@@ -11,5 +11,6 @@ export const useGetTask = ({ taskId, onSuccess }) => {
       onSuccess(task);
       return task;
     },
+    refetchOnWindowFocus: false,
   });
 };

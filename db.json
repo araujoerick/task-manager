@@ -9,8 +9,8 @@
     },
     {
       "id": "2",
-      "title": "Estudar FSC",
-      "description": "Estudar para o teste FSC",
+      "title": "Estudar React Query",
+      "description": "Estudar mais sobre useQuery, cache e useMutation",
       "time": "afternoon",
       "status": "in_progress"
     },
@@ -76,13 +76,6 @@
       "description": "Redigir artigo técnico para o blog",
       "time": "afternoon",
       "status": "done"
-    },
-    {
-      "id": "ec4fc0a1-651d-498e-b215-14efb95b3360",
-      "title": "Teste",
-      "description": "asdas",
-      "time": "morning",
-      "status": "not_started"
     }
   ]
 }
