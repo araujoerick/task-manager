@@ -5,6 +5,7 @@ import {
   TasksIcon,
 } from "../../assets/icons";
 import { useGetTasks } from "../../hooks/data/use-get-tasks";
+import { useWaterStore } from "../../hooks/data/use-water-store";
 import DashboardCard from "./DashboardCard";
 
 const DashboardCards = () => {
@@ -14,6 +15,10 @@ const DashboardCards = () => {
     (task) => task.status === "in_progress",
   ).length;
   const doneTasks = tasks?.filter((task) => task.status === "done").length;
+
+  const totalLiters = useWaterStore((state) => state.totalLiters);
+  const goal = useWaterStore((state) => state.goal);
+  const waterPercentege = Math.round((totalLiters / goal) * 100);
 
   return (
     <div className="flex flex-wrap gap-8">
@@ -34,7 +39,7 @@ const DashboardCards = () => {
       />
       <DashboardCard
         icon={<GlassWaterIcon />}
-        mainText="40%"
+        mainText={`${waterPercentege}%`}
         secondaryText="Hidratação"
       />
     </div>

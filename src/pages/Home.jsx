@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import TaskItem from "../components/TaskItem";
 import DashboardCards from "../components/ui/DashboardCards";
+import WaterTracker from "../components/ui/WaterTracker";
 import { useGetTasks } from "../hooks/data/use-get-tasks";
 
 const HomePage = () => {
@@ -35,7 +36,9 @@ const HomePage = () => {
                   Beba sua meta diária de água
                 </span>
               </div>
-              <div>Litros</div>
+              <div className="space-y-3">
+                <WaterTracker />
+              </div>
             </div>
           </div>
         </div>
