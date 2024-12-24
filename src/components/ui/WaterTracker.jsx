@@ -14,7 +14,7 @@ const WaterTracker = () => {
         <WaterCheckbox label="2.5 litros" value={2.5} />
       </div>
       <div className="self-end">
-        <p className="text-right text-xs">
+        <p className="hidden text-right text-xs xl:inline">
           <span className="text-xl font-semibold text-brand-primary">
             {totalLiters} litro{totalLiters > 1 && "s"}
           </span>

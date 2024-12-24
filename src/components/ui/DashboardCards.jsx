@@ -21,7 +21,7 @@ const DashboardCards = () => {
   const waterPercentege = Math.round((totalLiters / goal) * 100);
 
   return (
-    <div className="flex flex-wrap gap-8">
+    <div className="grid grid-cols-3 gap-8 xl:grid-cols-4">
       <DashboardCard
         icon={<Tasks2Icon />}
         mainText={tasks?.length}
@@ -38,6 +38,7 @@ const DashboardCards = () => {
         secondaryText="Tarefas em andamento"
       />
       <DashboardCard
+        className="xl:col-span-2"
         icon={<GlassWaterIcon />}
         mainText={`${waterPercentege}%`}
         secondaryText="Hidratação"

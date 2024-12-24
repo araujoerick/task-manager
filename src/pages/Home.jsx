@@ -11,11 +11,11 @@ const HomePage = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <section className="ml-64 w-full max-w-[1185px] space-y-6 px-8 pb-8 pt-16">
+      <section className="mt-14 w-full max-w-[1185px] space-y-6 px-8 pb-8 pt-16 lg:ml-64">
         <Header subtitle={"Início"} title={"Dashboard"} />
         <DashboardCards />
-        <div className="grid grid-cols-3 gap-8">
-          <div className="col-span-2 space-y-6 rounded-[10px] bg-brand-white p-6">
+        <div className="grid gap-8 md:grid-cols-3">
+          <div className="space-y-6 rounded-[10px] bg-brand-white p-6 md:col-span-2">
             <div>
               <h3 className="text-xl font-semibold">Tarefas</h3>
               <span className="text-sm text-brand-text-gray">
@@ -29,7 +29,7 @@ const HomePage = () => {
             </div>
           </div>
           <div>
-            <div className="col-span-2 space-y-6 rounded-[10px] bg-brand-white p-6">
+            <div className="space-y-6 rounded-[10px] bg-brand-white p-6">
               <div>
                 <h3 className="text-xl font-semibold">Água</h3>
                 <span className="text-sm text-brand-text-gray">

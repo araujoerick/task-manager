@@ -62,7 +62,7 @@ const TaskDetailsPage = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <section className="ml-64 flex w-full max-w-[1185px] flex-col gap-6 px-8 py-16">
+      <section className="mt-14 flex w-full max-w-[1185px] flex-col gap-6 px-8 py-16 lg:ml-64">
         <div>
           <button
             onClick={handleBackClick}
