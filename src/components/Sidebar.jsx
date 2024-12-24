@@ -3,7 +3,7 @@ import SidebarButton from "./ui/SidebarButton";
 
 const Sidebar = () => {
   return (
-    <aside className="flex h-screen max-w-64 flex-col bg-white">
+    <aside className="fixed left-0 top-0 z-50 flex h-screen max-w-64 flex-col bg-white">
       <div>
         <div className="space-y-4 px-8 py-6">
           <h1 className="text-xl font-semibold text-brand-primary">

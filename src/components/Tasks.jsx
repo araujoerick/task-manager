@@ -12,7 +12,7 @@ const Tasks = () => {
   const eveningTasks = tasks?.filter((task) => task.time === "evening");
 
   return (
-    <section className="w-full max-w-[1185px] space-y-6 px-8 py-16">
+    <section className="ml-64 w-full max-w-[1185px] space-y-6 px-8 pb-8 pt-16">
       <Header subtitle="Minhas Tarefas" title="Minhas Tarefas" />
       <div className="rounded-xl bg-white p-6">
         <div className="space-y-3">

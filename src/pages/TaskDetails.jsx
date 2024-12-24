@@ -62,7 +62,7 @@ const TaskDetailsPage = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <section className="flex w-full max-w-[1185px] flex-col gap-6 px-8 py-16">
+      <section className="ml-64 flex w-full max-w-[1185px] flex-col gap-6 px-8 py-16">
         <div>
           <button
             onClick={handleBackClick}
@@ -138,16 +138,15 @@ const TaskDetailsPage = () => {
                 error={errors?.description?.message}
               />
             </div>
-          </div>
-
-          <div className="flex w-full justify-end gap-2">
-            <Button
-              type="submit"
-              size="medium"
-              disabled={isUpdating || isDeleting}
-            >
-              Salvar
-            </Button>
+            <div className="flex w-full justify-end gap-2">
+              <Button
+                type="submit"
+                size="medium"
+                disabled={isUpdating || isDeleting}
+              >
+                Salvar
+              </Button>
+            </div>
           </div>
         </form>
       </section>

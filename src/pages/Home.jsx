@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <section className="w-full max-w-[1185px] space-y-6 px-8 py-16">
+      <section className="ml-64 w-full max-w-[1185px] space-y-6 px-8 pb-8 pt-16">
         <Header subtitle={"Início"} title={"Dashboard"} />
         <DashboardCards />
         <div className="grid grid-cols-3 gap-8">
