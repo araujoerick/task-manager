@@ -12,14 +12,14 @@
       "title": "Estudar React Query",
       "description": "Estudar mais sobre useQuery, cache e useMutation",
       "time": "afternoon",
-      "status": "in_progress"
+      "status": "not_started"
     },
     {
       "id": "3",
-      "title": "Ler livro",
-      "description": "Ler livro de matemática",
+      "title": "Planejar viagem",
+      "description": "Organizar itinerário e reservas para viagem",
       "time": "evening",
-      "status": "not_started"
+      "status": "in_progress"
     },
     {
       "id": "4",
@@ -41,13 +41,6 @@
       "description": "Fazer 5 km de corrida",
       "time": "evening",
       "status": "done"
-    },
-    {
-      "id": "7",
-      "title": "Planejar viagem",
-      "description": "Organizar itinerário e reservas para viagem",
-      "time": "afternoon",
-      "status": "not_started"
     },
     {
       "id": "8",
@@ -76,6 +69,13 @@
       "description": "Redigir artigo técnico para o blog",
       "time": "afternoon",
       "status": "done"
+    },
+    {
+      "id": "e84f938b-9fa5-4e22-88ce-f0570653ab31",
+      "title": "Estudar espanhol",
+      "description": "Estudar conversação com IA",
+      "time": "evening",
+      "status": "not_started"
     }
   ]
 }
