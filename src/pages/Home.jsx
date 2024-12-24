@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import TaskItem from "../components/TaskItem";
@@ -16,11 +18,16 @@ const HomePage = () => {
         <DashboardCards />
         <div className="grid gap-8 md:grid-cols-3">
           <div className="space-y-6 rounded-[10px] bg-brand-white p-6 md:col-span-2">
-            <div>
+            <div className="">
               <h3 className="text-xl font-semibold">Tarefas</h3>
-              <span className="text-sm text-brand-text-gray">
-                Resumo das tarefas disponíveis
-              </span>
+              <div className="flex justify-between">
+                <span className="text-sm text-brand-text-gray">
+                  Resumo das tarefas disponíveis
+                </span>
+                <Link to={"/tasks"} className="text-sm text-brand-primary">
+                  Ver mais...
+                </Link>
+              </div>
             </div>
             <div className="space-y-3">
               {tasks?.slice(0, 5).map((task) => (
