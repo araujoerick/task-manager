@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <section className="w-full space-y-6 px-8 py-16">
+      <section className="w-full max-w-[1185px] space-y-6 px-8 py-16">
         <Header subtitle={"Início"} title={"Dashboard"} />
         <DashboardCards />
         <div className="grid grid-cols-3 gap-8">
@@ -23,7 +23,7 @@ const HomePage = () => {
               </span>
             </div>
             <div className="space-y-3">
-              {tasks?.slice(0, 6).map((task) => (
+              {tasks?.slice(0, 5).map((task) => (
                 <TaskItem key={task.id} task={task} />
               ))}
             </div>
