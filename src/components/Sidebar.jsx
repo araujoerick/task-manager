@@ -8,7 +8,7 @@ const Sidebar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="sticky top-0 z-50 flex w-full justify-between bg-white pr-8 drop-shadow-md lg:fixed lg:left-0 lg:h-screen lg:max-w-64 lg:flex-col lg:justify-start lg:pr-0 lg:drop-shadow-none">
+    <nav className="sticky top-0 z-50 flex w-full justify-between bg-white pr-4 drop-shadow-md xs:pr-8 lg:fixed lg:left-0 lg:h-screen lg:max-w-64 lg:flex-col lg:justify-start lg:pr-0 lg:drop-shadow-none">
       <div className="space-y-4 px-8 py-6">
         <h1 className="text-xl font-semibold text-brand-primary">
           Task Manager
