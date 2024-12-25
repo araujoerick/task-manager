@@ -7,9 +7,15 @@ import TasksSeparator from "./TasksSeparator";
 const Tasks = () => {
   const { data: tasks } = useGetTasks();
 
-  const morningTasks = tasks?.filter((task) => task.time === "morning");
-  const afternoonTasks = tasks?.filter((task) => task.time === "afternoon");
-  const eveningTasks = tasks?.filter((task) => task.time === "evening");
+  const sortedTasks = tasks
+    ?.slice()
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+  const morningTasks = sortedTasks?.filter((task) => task.time === "morning");
+  const afternoonTasks = sortedTasks?.filter(
+    (task) => task.time === "afternoon",
+  );
+  const eveningTasks = sortedTasks?.filter((task) => task.time === "evening");
 
   return (
     <section className="w-full max-w-[1185px] space-y-4 px-4 pb-8 pt-8 xs:space-y-6 xs:px-8 lg:ml-64 lg:pt-16">

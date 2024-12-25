@@ -1,5 +1,6 @@
 import "./AddTaskDialog.css";
 
+import dayjs from "dayjs";
 import PropTypes from "prop-types";
 import { useRef } from "react";
 import { createPortal } from "react-dom";
@@ -39,6 +40,7 @@ const AddTaskDialog = ({ isOpen, handleClose }) => {
       description: data.description.trim(),
       time: data.time.trim(),
       status: "not_started",
+      createdAt: dayjs().toISOString(),
     };
 
     addTask(task, {

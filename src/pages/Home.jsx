@@ -10,6 +10,12 @@ import { useGetTasks } from "../hooks/data/use-get-tasks";
 const HomePage = () => {
   const { data: tasks } = useGetTasks();
 
+  const filteredTasks = tasks?.filter((task) => task.status !== "done");
+
+  const sortedTasks = filteredTasks
+    ?.slice()
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
   return (
     <div className="flex flex-col lg:flex-row">
       <Sidebar />
@@ -30,7 +36,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="space-y-3">
-              {tasks?.slice(0, 5).map((task) => (
+              {sortedTasks?.slice(0, 5).map((task) => (
                 <TaskItem key={task.id} task={task} />
               ))}
             </div>
