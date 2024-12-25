@@ -6,7 +6,7 @@ const WaterCheckbox = ({ label, value }) => {
   const setLiters = useWaterStore((state) => state.setLiters);
 
   const handleChange = () => {
-    setLiters(value); // Atualiza o valor e marca os menores
+    setLiters(value);
   };
 
   const getStatusClasses = () => {
@@ -29,7 +29,7 @@ const WaterCheckbox = ({ label, value }) => {
           <input
             className="absolute h-full w-full cursor-pointer opacity-0"
             type="checkbox"
-            checked={selectedValues.includes(value)} // Marca os menores também
+            checked={selectedValues.includes(value)}
             onChange={handleChange}
           />
           {selectedValues.includes(value) && <CheckIcon />}

@@ -21,6 +21,9 @@ export default {
           danger: "#EF4444",
         },
       },
+      screens: {
+        xs: "480px",
+      },
     },
   },
   plugins: [],

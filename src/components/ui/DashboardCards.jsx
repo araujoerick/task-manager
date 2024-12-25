@@ -21,7 +21,7 @@ const DashboardCards = () => {
   const waterPercentege = Math.round((totalLiters / goal) * 100);
 
   return (
-    <div className="grid grid-cols-2 gap-8 md:grid-cols-3 xl:grid-cols-4">
+    <div className="grid grid-cols-2 gap-4 xs:gap-8 md:grid-cols-3 xl:grid-cols-4">
       <DashboardCard
         icon={<Tasks2Icon />}
         mainText={tasks?.length}

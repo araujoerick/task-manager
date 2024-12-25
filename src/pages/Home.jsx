@@ -13,10 +13,10 @@ const HomePage = () => {
   return (
     <div className="flex flex-col lg:flex-row">
       <Sidebar />
-      <section className="w-full max-w-[1185px] space-y-6 px-8 pb-8 pt-8 lg:ml-64 lg:pt-16">
+      <section className="w-full max-w-[1185px] space-y-4 px-4 pb-8 pt-8 xs:space-y-6 xs:px-8 lg:ml-64 lg:pt-16">
         <Header subtitle={"Início"} title={"Dashboard"} />
         <DashboardCards />
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-4 xs:gap-8 md:grid-cols-3">
           <div className="space-y-6 rounded-[10px] bg-brand-white p-6 md:col-span-2">
             <div className="">
               <h3 className="text-xl font-semibold">Tarefas</h3>
