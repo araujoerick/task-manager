@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { AddIcon, TrashIcon } from "../assets/icons";
+import { AddIcon } from "../assets/icons";
 import AddTaskDialog from "./AddTaskDialog";
 import Button from "./ui/Button";
 
@@ -16,10 +16,6 @@ const Header = ({ subtitle, title }) => {
         <h2 className="text-xl font-semibold">{title}</h2>
       </div>
       <div className="flex items-center gap-3 self-end">
-        <Button color="ghost">
-          Limpar tarefas
-          <TrashIcon />
-        </Button>
         <Button onClick={() => setAddTaskDialogIsOpen(true)}>
           Nova tarefa
           <AddIcon />
