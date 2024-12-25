@@ -11,9 +11,9 @@ const HomePage = () => {
   const { data: tasks } = useGetTasks();
 
   return (
-    <div className="flex">
+    <div className="flex flex-col lg:flex-row">
       <Sidebar />
-      <section className="mt-14 w-full max-w-[1185px] space-y-6 px-8 pb-8 pt-16 lg:ml-64">
+      <section className="w-full max-w-[1185px] space-y-6 px-8 pb-8 pt-8 lg:ml-64 lg:pt-16">
         <Header subtitle={"Início"} title={"Dashboard"} />
         <DashboardCards />
         <div className="grid gap-8 md:grid-cols-3">

@@ -3,7 +3,7 @@ import Tasks from "../components/Tasks";
 
 function TasksPage() {
   return (
-    <div className="flex">
+    <div className="flex flex-col lg:flex-row">
       <Sidebar />
       <Tasks />
     </div>

@@ -1,9 +1,14 @@
-import { HomeIcon, TasksIcon } from "../assets/icons/";
+import { useState } from "react";
+
+import { HomeIcon, MenuIcon, TasksIcon } from "../assets/icons/";
 import SidebarButton from "./ui/SidebarButton";
 
 const Sidebar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
-    <nav className="fixed left-0 top-0 z-50 flex w-screen justify-between bg-white pr-8 lg:h-screen lg:max-w-64 lg:flex-col lg:justify-start lg:pr-0">
+    <nav className="sticky top-0 z-50 flex w-full justify-between bg-white pr-8 drop-shadow-md lg:fixed lg:left-0 lg:h-screen lg:max-w-64 lg:flex-col lg:justify-start lg:pr-0 lg:drop-shadow-none">
       <div className="space-y-4 px-8 py-6">
         <h1 className="text-xl font-semibold text-brand-primary">
           Task Manager
@@ -13,7 +18,9 @@ const Sidebar = () => {
           <span className="text-brand-primary">organizador de tarefas</span>.
         </p>
       </div>
-      <div className="flex gap-2 p-2 lg:flex-col">
+      <div
+        className={`${isMenuOpen ? "flex" : "hidden"} absolute right-2 top-[76px] flex flex-col gap-2 rounded-b-[10px] bg-brand-white p-3 md:p-2`}
+      >
         <SidebarButton to="/">
           <HomeIcon />
           Início
@@ -23,6 +30,23 @@ const Sidebar = () => {
           Minhas Tarefas
         </SidebarButton>
       </div>
+      <div className="hidden gap-2 p-2 md:flex lg:flex-col">
+        <SidebarButton to="/">
+          <HomeIcon />
+          Início
+        </SidebarButton>
+        <SidebarButton to="/tasks">
+          <TasksIcon />
+          Minhas Tarefas
+        </SidebarButton>
+      </div>
+      <button
+        type="button"
+        className="flex items-center gap-2 bg-brand-primary px-4 text-white md:hidden"
+        onClick={toggleMenu}
+      >
+        <MenuIcon />
+      </button>
     </nav>
   );
 };
