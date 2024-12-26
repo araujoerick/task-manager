@@ -94,7 +94,7 @@ const TaskItem = ({ task }) => {
             <TrashIcon className="text-brand-text-gray" />
           )}
         </Button>
-        <Link to={`/task/${task.id}`} className="transition hover:opacity-75">
+        <Link to={`/tasks/${task.id}`} className="transition hover:opacity-75">
           <DetailsIcon />
         </Link>
       </div>
