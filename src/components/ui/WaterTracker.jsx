@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { GlassWaterIcon } from "../../assets/icons";
 import { useWaterStore } from "../../hooks/data/use-water-store";
 import WaterCheckbox from "./WaterCheckbox";
@@ -6,6 +8,11 @@ const WaterTracker = () => {
   const totalLiters = useWaterStore((state) => state.totalLiters);
   const goal = useWaterStore((state) => state.goal);
   const waterPercentege = Math.round((totalLiters / goal) * 100);
+  const fetchWaterData = useWaterStore((state) => state.fetchWaterData);
+
+  useEffect(() => {
+    fetchWaterData();
+  }, [fetchWaterData]);
 
   return (
     <div className="grid grid-cols-2 gap-4 md:grid-cols-1 md:gap-0 lg:flex lg:justify-between">

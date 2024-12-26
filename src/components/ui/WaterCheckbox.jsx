@@ -5,8 +5,8 @@ const WaterCheckbox = ({ label, value }) => {
   const selectedValues = useWaterStore((state) => state.selectedValues);
   const setLiters = useWaterStore((state) => state.setLiters);
 
-  const handleChange = () => {
-    setLiters(value);
+  const handleChange = async () => {
+    await setLiters(value);
   };
 
   const getStatusClasses = () => {
