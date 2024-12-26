@@ -9,6 +9,10 @@ const WaterTracker = () => {
   const goal = useWaterStore((state) => state.goal);
   const waterPercentege = Math.round((totalLiters / goal) * 100);
   const fetchWaterData = useWaterStore((state) => state.fetchWaterData);
+  const generateValuesUpToGoal = useWaterStore(
+    (state) => state.generateValuesUpToGoal,
+  );
+  const values = generateValuesUpToGoal(goal);
 
   useEffect(() => {
     fetchWaterData();
@@ -27,18 +31,24 @@ const WaterTracker = () => {
       </div>
 
       <div className="w-full space-y-3 xl:w-auto">
-        <WaterCheckbox label="500 ml" value={0.5} />
-        <WaterCheckbox label="1 litro" value={1} />
-        <WaterCheckbox label="1.5 litros" value={1.5} />
-        <WaterCheckbox label="2 litros" value={2} />
-        <WaterCheckbox label="2.5 litros" value={2.5} />
+        {values.map((value) => (
+          <WaterCheckbox
+            key={value}
+            label={
+              value === 0.5
+                ? "500 ml"
+                : `${value.toFixed(1)} litro${value > 1 ? "s" : ""}`
+            }
+            value={value}
+          />
+        ))}
       </div>
       <div className="self-end">
         <p className="hidden text-right text-xs xl:inline-block">
           <span className="text-xl font-semibold text-brand-primary">
             {totalLiters} litro{totalLiters > 1 && "s"}
           </span>
-          /2.5L
+          <span>/{goal}L</span>
         </p>
       </div>
     </div>

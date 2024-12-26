@@ -4,13 +4,22 @@ import { api } from "../../lib/axios";
 
 export const useWaterStore = create((set) => ({
   totalLiters: 0,
-  goal: 2.5,
+  goal: 3,
   selectedValues: [],
 
+  generateValuesUpToGoal: (goal) => {
+    const values = [];
+    for (let i = 0.5; i <= goal; i += 0.5) {
+      values.push(i);
+    }
+    return values;
+  },
+
   setLiters: async (value) => {
-    const selectedValues = [0.5, 1, 1.5, 2, 2.5].filter(
-      (lowValue) => lowValue <= value,
-    );
+    const selectedValues = useWaterStore
+      .getState()
+      .generateValuesUpToGoal(value)
+      .filter((lowValue) => lowValue <= value);
 
     await api.post("/water-hydration", { liters: value });
 
@@ -23,9 +32,11 @@ export const useWaterStore = create((set) => ({
   fetchWaterData: async () => {
     const { data } = await api.get("/water-hydration");
     const totalLiters = data.reduce((sum, record) => sum + record.liters, 0);
-    const selectedValues = [0.5, 1, 1.5, 2, 2.5].filter(
-      (lowValue) => lowValue <= totalLiters,
-    );
+
+    const selectedValues = useWaterStore
+      .getState()
+      .generateValuesUpToGoal(totalLiters)
+      .filter((lowValue) => lowValue <= totalLiters);
 
     set(() => ({
       totalLiters,
