@@ -36,7 +36,12 @@ const HomePage = () => {
               </div>
             </div>
             <div className="space-y-3">
-              {sortedTasks?.slice(0, 5).map((task) => (
+              {sortedTasks?.length === 0 && (
+                <p className="text-sm text-brand-dark-gray">
+                  Nenhuma tarefa disponível.
+                </p>
+              )}
+              {sortedTasks?.slice(0, 6).map((task) => (
                 <TaskItem key={task.id} task={task} />
               ))}
             </div>
