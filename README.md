@@ -1,4 +1,4 @@
-# Task Manager Frontend
+# Task Manager
 
 ## 📋 Sobre o Projeto
 
@@ -16,7 +16,6 @@ O **Task Manager** é um aplicativo web desenvolvido para gerenciar tarefas de f
 
 ## 🛠️ Tecnologias Utilizadas
 
-### **Frontend**
 - **React com Vite**: Para criação de interfaces rápidas e reativas.  
 - **React Hook Form**: Para gerenciamento eficiente de formulários.  
 - **React Query**: Para gerenciamento de dados assíncronos e otimização de cache.  
@@ -24,25 +23,18 @@ O **Task Manager** é um aplicativo web desenvolvido para gerenciar tarefas de f
 - **Hooks Customizados**: Organização e reutilização de lógica.  
 - **Tailwind CSS**: Para estilização rápida e responsiva.
 
-### **Backend** *(Repositório Separado)*
-- **Node.js com Fastify**: API REST para operações CRUD.  
-- **Prisma**: ORM para integração com banco de dados.  
-- **NeonDB**: Banco de dados em nuvem.  
-- **Zod**: Validação de dados.  
-- **Cron Jobs**: Agendamento automático de tarefas.  
-
 ---
 
 ## 📦 Como Executar o Projeto
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/task-manager-frontend.git
+git clone https://github.com/seu-usuario/task-manager.git
 ```
 
 2. Acesse o diretório do projeto:
 ```bash
-cd task-manager-frontend
+cd task-manager
 ```
 
 3. Instale as dependências:
@@ -59,13 +51,6 @@ npm run dev
 ```
 http://localhost:5173
 ```
-
----
-
-## 🔧 Melhorias Futuras
-
-- Implementação de autenticação de usuários com o **Clerk**.  
-- Melhor organização das rotas no backend para facilitar a manutenção.  
 
 ---
 
