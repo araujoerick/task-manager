@@ -1,4 +1,7 @@
 # Task Manager
+**`React Query`**
+**`Vite`**
+**`React Hook Form`**
 
 ## 📋 Sobre o Projeto
 
@@ -59,6 +62,14 @@ http://localhost:5173
 Acesse a aplicação em produção: [Task Manager Frontend](https://task-manager-araujo.vercel.app/)
 
 ---
+### :camera: Capturas do projeto:
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/af0a2269-3bb2-4ec2-a396-a39aa6c99a4f" alt="">
+  <img src="https://github.com/user-attachments/assets/0eba6aea-e506-4776-9919-ca8cac849ffb" alt="">
+  <img src="https://github.com/user-attachments/assets/58636571-ee92-48b6-bb71-f0d62cf2f012" alt="">
+  <img src="https://github.com/user-attachments/assets/57a54399-84d6-4674-b394-16048c0d3f17" alt="">
+</div>
 
 ## 📄 Licença
 
